@@ -1,7 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>302 Found</title>
-</head><body>
-<h1>Found</h1>
-<p>The document has moved <a href="https://pages.cs.wisc.edu/~cs400/SortedCollectionInterface.java">here</a>.</p>
-</body></html>
+public interface SortedCollectionInterface<T extends Comparable<T>>{
+
+    public boolean insert(T data) throws NullPointerException, IllegalArgumentException;
+
+    public boolean remove(T data) throws NullPointerException, IllegalArgumentException;
+
+    public boolean contains(T data);
+
+    public int size();
+
+    public boolean isEmpty();
+
+}
