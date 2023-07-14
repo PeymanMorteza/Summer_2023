@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Java Script Demo
+</title>
+</head>
+<body>
+<h1 id="hello">Hello</h1>
+<h1>Good Bye</h1>
+<button onclick="addExclamationMark()"> Add!</button>
+<button onclick="removeExclamationMark()"> Remove!</button>
+</br>
+</br>
+<label for="x"> X is: </label>
+<input id="x" type="text">
+</br>
+<label for="y"> Y is: </label>
+<input id="y" type="text">
+<button onclick="mySum()" > Sum</button>
+<p id="result">
+result is: 
+</p>
+<button onclick="changeTitle()">Change</button>
+<script>
+function changeTitle(){
+	var titles=document.getElementsByTagName("title");
+	titles[0].innerHTML="Title Changed";
+}
+function mySum(){
+	var x=parseFloat(document.getElementById("x").value);
+	var y=parseFloat(document.getElementById("y").value);
+	var z=x+y;
+	var result=document.getElementById("result");
+	result.innerHTML="result is:" + z;
+}
+function addExclamationMark(){
+	var headings=document.getElementsByTagName("h1");
+	for (let i=0;i<headings.length;i++){
+		headings[i].innerHTML+="!";
+	}
+}
+function removeExclamationMark(){
+	var headings=document.getElementsByTagName("h1");
+	for (let i=0;i<headings.length;i++){
+		if (headings[i].innerHTML.slice(-1)=="!"){
+			headings[i].innerHTML=headings[i].innerHTML.slice(0,-1);
+		}
+	}
+}
+</script>
+</body>
+</html>
+
